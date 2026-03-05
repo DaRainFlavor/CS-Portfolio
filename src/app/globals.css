@@ -1,26 +1,223 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/* ── Custom Theme — Dark Navy & Golden Amber ── */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-background: #0a0e1a;
+  --color-foreground: #e8e6e3;
+  --color-surface: #111827;
+  --color-surface-light: #1a2238;
+  --color-border: rgba(255, 255, 255, 0.07);
+  --color-accent: #cc0000;
+  --color-accent-dark: #990000;
+  --color-accent-light: #e62020;
+  --color-muted: #8892a4;
+  --font-sans: var(--font-outfit);
   --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-playfair);
+  --font-space: var(--font-space);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ── Base ── */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Subtle radial gradient overlay for depth */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 20% 10%,
+      rgba(240, 165, 0, 0.03) 0%,
+      transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 90%,
+      rgba(240, 165, 0, 0.025) 0%,
+      transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #0a0e1a;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent-dark);
+  border-radius: 999px;
+}
+
+/* ── Simple fade-in for sections ── */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+/* ── Golden shimmer animation ── */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.gold-shimmer {
+  background: linear-gradient(90deg,
+      var(--color-accent-dark) 0%,
+      var(--color-accent-light) 50%,
+      var(--color-accent-dark) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* ── Golden glow on hover ── */
+.glow-gold {
+  transition: box-shadow 0.3s ease;
+}
+
+.glow-gold:hover {
+  box-shadow: 0 0 20px rgba(240, 165, 0, 0.15),
+    0 0 40px rgba(240, 165, 0, 0.05);
+}
+
+/* ── Dot pattern background ── */
+.dot-pattern {
+  background-image: radial-gradient(rgba(240, 165, 0, 0.07) 1px,
+      transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ── Timeline dot ── */
+.timeline-dot {
+  position: relative;
+}
+
+.timeline-dot::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 24px;
+  width: 10px;
+  height: 10px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(240, 165, 0, 0.4);
+}
+
+/* ── Golden top stripe on cards ── */
+.card-stripe {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-stripe::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+
+.card-stripe:hover::before {
+  transform: scaleX(1);
+}
+
+/* ── Animated gradient border sweep ── */
+@keyframes border-sweep {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ── Slow gentle rotation for geometric decorations ── */
+@keyframes slow-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── Magazine diagonal stripe texture ── */
+.magazine-stripes {
+  background-image: repeating-linear-gradient(-45deg,
+      transparent,
+      transparent 20px,
+      rgba(255, 255, 255, 0.02) 20px,
+      rgba(255, 255, 255, 0.02) 22px);
+}
+
+/* ── Magazine card number ── */
+.magazine-number {
+  font-size: clamp(4rem, 8vw, 7rem);
+  font-weight: 900;
+  line-height: 1;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.15);
+  color: transparent;
+  transition: all 0.5s ease;
+}
+
+.magazine-card:hover .magazine-number {
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.4);
+}
+
+/* ── Magazine card lift ── */
+.magazine-card {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease;
+}
+
+.magazine-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* ── Red pulse glow for section ── */
+.red-glow {
+  box-shadow: inset 0 0 120px rgba(204, 0, 0, 0.1);
 }
