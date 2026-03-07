@@ -115,7 +115,7 @@ const services = [
   },
   {
     title: "Desktop App",
-    desc: "Native desktop applications with modern UI frameworks, delivering fast and reliable software experiences.",
+    desc: "Building standalone offline applications with Python (Tkinter) and building interactive graphical software with C++ and SFML.",
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25A2.25 2.25 0 015.25 3h13.5A2.25 2.25 0 0121 5.25z" />
@@ -237,7 +237,7 @@ const projects = [
   {
     title: "9 Mazes of Hell",
     desc: "A game featuring maze levels with demons that chase the player using different AI movement patterns — random patrols and aggressive line-of-sight pursuit.",
-    tags: ["Phaser", "JavaScript", "Game Dev"],
+    tags: ["Phaser", "JavaScript"],
     role: "Full Stack",
     link: "https://github.com/DaRainFlavor/9-Mazes-of-Hell",
     linkLabel: "GitHub",
@@ -385,8 +385,11 @@ export default function Home() {
           }`}
       >
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
-          <a href="#" className="text-xl font-bold text-foreground tracking-tight">
-            A<span className="text-accent">.</span>
+          <a href="#" className="flex items-center gap-2 group">
+            <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="transform group-hover:scale-105 transition-transform duration-300">
+              <path d="M20 4L4 36H12L20 20L28 36H36L20 4Z" fill="currentColor" className="text-foreground" />
+              <path d="M12 36L20 20L28 36H12Z" fill="currentColor" className="text-accent" />
+            </svg>
           </a>
 
           {/* Desktop links */}
@@ -482,7 +485,7 @@ export default function Home() {
               src="/profile.png"
               alt="Adrian — Full Stack Developer"
               fill
-              className="object-contain object-bottom scale-100 translate-y-8 origin-bottom md:scale-100 md:translate-y-0"
+              className="object-contain object-bottom scale-100 translate-y-8 origin-bottom md:scale-100 md:translate-y-0 grayscale contrast-[1.05] brightness-110 drop-shadow-[0_10px_35px_rgba(0,0,0,0.8)] sepia-[.15]"
               priority
             />
 
@@ -504,16 +507,10 @@ export default function Home() {
               <span className="w-6 h-[1px] bg-accent inline-block md:hidden" />
             </p>
 
-            <div className="relative mb-4 md:mb-4 lg:mb-6 flex flex-col items-center md:items-start">
-              <h1 className="font-[family-name:var(--font-playfair)] text-[4.25rem] sm:text-[8rem] md:text-[10rem] lg:text-[11.5rem] font-black text-foreground leading-[0.85] tracking-tighter">
-                Adrian
+            <div className="relative mb-6 md:mb-8 flex flex-col items-center md:items-start text-center md:text-left z-20">
+              <h1 className="font-[family-name:var(--font-playfair)] text-[3.5rem] sm:text-[4.5rem] md:text-[5.5rem] lg:text-[7rem] font-bold text-foreground leading-[1] md:leading-[0.9] tracking-tighter mix-blend-difference md:mix-blend-normal">
+                Adrian <span className="italic text-accent">Vaflor.</span>
               </h1>
-              <div className="flex items-end gap-1.5 md:gap-4 md:-mt-8 sm:-mt-12 md:-mt-16 lg:-mt-24 md:ml-12 sm:ml-24 md:ml-32 lg:ml-48">
-                <h1 className="font-[family-name:var(--font-playfair)] italic text-[3.25rem] sm:text-[6.5rem] md:text-[8.5rem] lg:text-[10rem] font-medium text-accent leading-[0.8] tracking-tight">
-                  Vaflor
-                </h1>
-                <span className="w-2 h-2 sm:w-4 sm:h-4 lg:w-6 lg:h-6 bg-accent rounded-full mb-1.5 sm:mb-5 lg:mb-8" />
-              </div>
             </div>
 
             <h2 className="font-[family-name:var(--font-space)] uppercase tracking-[0.15em] md:tracking-[0.25em] text-[9px] sm:text-sm md:text-lg lg:text-xl text-muted font-light mb-3 md:mb-6 lg:ml-4 z-30 relative bg-surface/80 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none inline-block px-3 md:px-0 md:pr-6 py-1 mx-auto md:mx-0 rounded-full md:rounded-l-none md:rounded-r-xl border border-white/5 md:border-none">
@@ -650,7 +647,7 @@ export default function Home() {
                 <div className="font-[family-name:var(--font-space)] uppercase tracking-widest text-muted text-xs md:text-sm mt-2">Computer Science</div>
               </div>
               <div>
-                <div className="text-4xl md:text-6xl font-black text-foreground">15+</div>
+                <div className="text-4xl md:text-6xl font-black text-foreground">10+</div>
                 <div className="font-[family-name:var(--font-space)] uppercase tracking-widest text-muted text-xs md:text-sm mt-2">Academic Projects</div>
               </div>
               <div className="pt-2"> {/* Added top pt for spacing if needed */}
@@ -903,7 +900,7 @@ export default function Home() {
           <div className="text-center mb-14 md:mb-20">
             <p className="font-[family-name:var(--font-space)] text-accent text-xs tracking-[0.5em] uppercase mb-4 flex items-center justify-center gap-3 font-bold">
               <span className="w-12 h-[3px] bg-accent/40 inline-block" />
-              Featured Portfolio
+              Featured Works
               <span className="w-12 h-[3px] bg-accent/40 inline-block" />
             </p>
             <h2 className="font-[family-name:var(--font-playfair)] text-5xl md:text-7xl lg:text-8xl font-black text-foreground leading-none tracking-tighter">
@@ -1047,9 +1044,14 @@ export default function Home() {
       <footer className="py-12 border-t border-white/5 bg-surface/30 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4">
-            <div className="w-8 h-8 bg-accent rounded-sm flex items-center justify-center text-[#0a0e1a] font-bold">A.</div>
+            <div className="w-8 h-8 flex items-center justify-center">
+              <svg width="24" height="24" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 4L4 36H12L20 20L28 36H36L20 4Z" fill="currentColor" className="text-foreground" />
+                <path d="M12 36L20 20L28 36H12Z" fill="currentColor" className="text-accent" />
+              </svg>
+            </div>
             <p className="text-xs tracking-widest uppercase text-muted font-medium">
-              © 2026 Adrian Vaflor. Built for the Future.
+              © 2026 Adrian Vaflor.
             </p>
           </div>
           <div className="flex items-center gap-8">
