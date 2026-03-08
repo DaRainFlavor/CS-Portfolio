@@ -182,7 +182,7 @@ const services = [
 const projects = [
   {
     title: "CHR Case Management & Monitoring System",
-    desc: "Built from scratch for the Commission on Human Rights Region VII. Handles 6 CHR roles with full case workflow, monitoring dashboards, and role-based access.",
+    desc: "Designed and built a full case-management platform for the CHR Region VII, coordinating requirements with stakeholders and translating operational needs into a 6-role workflow system.",
     tags: ["Next.js", "Tailwind CSS", "Supabase", "Vercel"],
     role: "Full Stack",
     link: "https://chr-cmms-ecru.vercel.app",
@@ -191,7 +191,7 @@ const projects = [
   },
   {
     title: "Compiley Studio",
-    desc: "A desktop IDE running a custom-designed programming language called 'Brainrot' with its own compiler, and an AI assistant you can talk to by speech or text — like Cursor, built from scratch.",
+    desc: "A desktop IDE running a custom-designed programming language called 'Brainrot' with its own compiler, and an AI coding assistant you can talk to by speech or text — like Cursor, built from scratch.",
     tags: ["MIPS Assembly", "Python", "Tkinter", "Mars.jar"],
     role: "Full Stack · Project Manager",
     link: "https://github.com/DaRainFlavor/CMSC-124-PL-Project",
@@ -200,7 +200,7 @@ const projects = [
   },
   {
     title: "Inspectify",
-    desc: "Mobile app that scans houses using AI to highlight damaged areas, generate tailored maintenance plans, safety assessments, and locate nearest stores and evacuation areas.",
+    desc: "Mobile app using AI and Gemini's spatial understanding API to assess home damage. Includes a disaster preparedness tool featuring nearest evacuation centers and hardware stores.",
     tags: ["Expo", "Python", "Flask", "MySQL", "Gemini", "Railway", "Cloudinary"],
     role: "Full Stack",
     link: "https://github.com/J-RuriAugusto/INSPECTIFY",
@@ -260,7 +260,7 @@ const experience = [
     role: "Asset Management Intern",
     company: "Lexmark-Xerox Global Services Support",
     period: "2025",
-    desc: "Customer Data Management team — 250 hours of hands-on asset management, data processing, and operational support.",
+    desc: "Processed and managed large-scale enterprise asset datasets within the Lexmark-Xerox global services infrastructure, collaborating across teams to ensure operational data integrity.",
   },
   {
     role: "CEB-I Hacks Finalist",
@@ -404,7 +404,7 @@ export default function Home() {
               </a>
             ))}
             <a
-              href="/Adrian_Vaflor_CV.pdf"
+              href="/VAFLOR_RESUME.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="ml-2 px-6 py-2.5 bg-accent hover:bg-accent-light text-[#0a0e1a] text-sm font-semibold transition-all duration-200 rounded-full hover:shadow-[0_0_20px_rgba(240,165,0,0.3)]"
@@ -525,7 +525,7 @@ export default function Home() {
 
             <div className="flex items-center justify-center md:justify-start gap-2.5 md:gap-4 mt-6 md:mt-6 lg:ml-4 relative z-30 w-full sm:w-auto">
               <a
-                href="/Adrian_Vaflor_CV.pdf"
+                href="/VAFLOR_RESUME.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-5 md:px-8 py-2.5 md:py-3.5 bg-accent hover:bg-accent-light text-white text-[11px] md:text-base font-semibold transition-all duration-200 rounded-full hover:shadow-[0_0_24px_rgba(204,0,0,0.35)] flex-1 sm:flex-none max-w-[160px] md:max-w-none"
