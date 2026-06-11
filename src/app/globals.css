@@ -1,26 +1,129 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #faf8f6; /* Premium warm cream background */
+  --foreground: #172033; /* Deep gray-navy charcoal */
+  --card: #ffffff;
+  --card-foreground: #172033;
+  --popover: #ffffff;
+  --popover-foreground: #172033;
+  --primary: #fc7643; /* Bright coral-orange accent */
+  --primary-foreground: #ffffff;
+  --secondary: #f3efe9; /* Warm grey-cream */
+  --secondary-foreground: #172033;
+  --muted: #f3efe9;
+  --muted-foreground: #5e6e85; /* Soft grayish-blue for captions/body */
+  --accent: #fc7643;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #fafafa;
+  --border: #eadecf; /* Soft warm border */
+  --input: #eadecf;
+  --ring: #fc7643;
+  --radius: 0.75rem;
+  
+  /* Blob details */
+  --blob-peach: #fdd1af;
+  --blob-green: #d4dfbf;
+  --dot-grid: rgba(252, 118, 67, 0.15);
 }
 
-@theme inline {
+.dark {
+  --background: #0d121f; /* Deep dark slate-navy */
+  --foreground: #f0ede9; /* Soft warm white */
+  --card: #141b2b; /* Slightly lighter navy for cards */
+  --card-foreground: #f0ede9;
+  --popover: #141b2b;
+  --popover-foreground: #f0ede9;
+  --primary: #fc7643; /* Maintain coral-orange accent for brand consistency */
+  --primary-foreground: #ffffff;
+  --secondary: #1d2538;
+  --secondary-foreground: #f0ede9;
+  --muted: #1d2538;
+  --muted-foreground: #8ea1bc;
+  --accent: #fc7643;
+  --accent-foreground: #ffffff;
+  --destructive: #7f1d1d;
+  --destructive-foreground: #fafafa;
+  --border: #1f2a3f;
+  --input: #1f2a3f;
+  --ring: #fc7643;
+  
+  --blob-peach: #3e322a;
+  --blob-green: #252e1f;
+  --dot-grid: rgba(252, 118, 67, 0.25);
+}
+
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  
+  --color-blob-peach: var(--blob-peach);
+  --color-blob-green: var(--blob-green);
+  --color-dot-grid: var(--dot-grid);
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+  
+  --font-sans: var(--font-jakarta), Inter, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Custom base styles */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Smooth theme transitions */
+.theme-transition * {
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.15s ease, opacity 0.15s ease !important;
+}
+
+/* Elegant scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Decorative dot grid pattern */
+.dot-matrix {
+  background-image: radial-gradient(var(--dot-grid) 1.5px, transparent 1.5px);
+  background-size: 16px 16px;
 }
