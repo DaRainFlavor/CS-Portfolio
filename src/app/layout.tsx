@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -13,6 +13,10 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+export const viewport: Viewport = {
+  width: "1280",
+};
 
 export const metadata: Metadata = {
   title: "Adrian Vaflor | Software Engineer & Researcher",
@@ -63,6 +67,26 @@ export default function RootLayout({
                   } else {
                     document.documentElement.classList.remove('dark');
                   }
+                } catch (e) {}
+
+                try {
+                  var width = 1280;
+                  function adjustViewport() {
+                    var screenWidth = window.screen.width;
+                    if (screenWidth < width) {
+                      var scale = screenWidth / width;
+                      var meta = document.querySelector('meta[name="viewport"]');
+                      if (!meta) {
+                        meta = document.createElement('meta');
+                        meta.name = 'viewport';
+                        document.head.appendChild(meta);
+                      }
+                      meta.setAttribute('content', 'width=' + width + ', initial-scale=' + scale + ', minimum-scale=' + scale + ', maximum-scale=5, user-scalable=yes');
+                    }
+                  }
+                  adjustViewport();
+                  window.addEventListener('resize', adjustViewport);
+                  window.addEventListener('orientationchange', adjustViewport);
                 } catch (e) {}
               })()
             `,
