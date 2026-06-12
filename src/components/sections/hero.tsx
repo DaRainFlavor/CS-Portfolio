@@ -115,7 +115,7 @@ export function Hero() {
               {/* Profile Image (Rendered in Full Color, Upright) */}
               <div className="absolute w-[94%] h-[99%] bottom-[9%] left-0 right-0 mx-auto z-10 flex items-end justify-center">
                  <Image
-                  src="/adrian_photo.png"
+                  src="/adrian_photo2.png"
                   alt="Adrian Vaflor"
                   fill
                   className="object-contain object-bottom scale-[1.15] translate-x-[-4%] translate-y-[-20%] contrast-[1.01] brightness-[1.01] drop-shadow-[0_4px_24px_rgba(0,0,0,0.12)]"
