@@ -14,8 +14,8 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <Education />
-        <Projects />
         <Research />
+        <Projects />
         <Extracurricular />
         <Contact />
       </main>

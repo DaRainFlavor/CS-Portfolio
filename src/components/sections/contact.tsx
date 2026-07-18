@@ -59,7 +59,7 @@ export function Contact() {
           transition={{ duration: 0.6 }}
           className="text-lg sm:text-2xl text-muted-foreground leading-relaxed text-center font-normal max-w-3xl"
         >
-          I pride myself on adaptability. I don't tie myself to one stack. I learn whatever technologies are needed to build, optimize, and ship software that solves real problems and creates meaningful impact.
+          I pride myself on adaptability and continuous learning. I focus on core computer science foundations rather than a single technology stack, adapting quickly to teach, research, and build with whatever tools are needed to make a meaningful impact.
         </motion.p>
 
         {/* Big heading text */}
@@ -70,8 +70,8 @@ export function Contact() {
           transition={{ duration: 0.6, delay: 0.15 }}
           className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tighter text-[#172033] dark:text-[#f0ede9] text-center mt-12 mb-16 leading-[1.1] font-sans"
         >
-          Let's build something <br className="sm:hidden" />
-          <span className="text-primary bg-gradient-to-r from-primary to-orange-500 bg-clip-text text-transparent">amazing</span> together!
+          Let's connect and <br className="sm:hidden" />
+          <span className="text-primary bg-gradient-to-r from-primary to-orange-500 bg-clip-text text-transparent">collaborate!</span>
         </motion.h2>
 
         {/* Social Links */}

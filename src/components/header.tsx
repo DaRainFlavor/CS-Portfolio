@@ -7,8 +7,8 @@ import { Menu, X, Sun, Moon } from "lucide-react";
 
 const navItems = [
   { label: "Education", href: "#education" },
-  { label: "Projects", href: "#projects" },
   { label: "Research", href: "#research" },
+  { label: "Projects", href: "#projects" },
   { label: "Extra-curricular", href: "#extracurricular" },
   { label: "Contact", href: "#contact" },
 ];

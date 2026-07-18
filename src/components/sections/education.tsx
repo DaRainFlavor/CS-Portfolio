@@ -93,7 +93,7 @@ export function Education() {
                   B.S. in Computer Science
                 </span>
                 <span className="w-1.5 h-1.5 rounded-full bg-border" />
-                <span>Expected 2026</span>
+                <span>Class of 2026</span>
               </div>
             </div>
 
@@ -160,14 +160,14 @@ export function Education() {
 
             {/* GWA Stat */}
             <div className="bg-[#e35624] px-8 py-6 flex flex-col gap-1.5 hover:bg-[#c94d1f] transition-colors duration-300">
-              <span className="text-xs font-bold font-mono text-white/70 uppercase tracking-widest">Academic Standing</span>
+              <span className="text-xs font-bold font-mono text-white/70 uppercase tracking-widest">Honors</span>
               <div className="flex items-end gap-3 mt-1">
                 <span className="text-6xl sm:text-7xl font-black text-white leading-none tracking-tight">
                   <AnimatedCounter from={5} to={1.55} decimals={2} />
                 </span>
                 <span className="text-sm text-white/60 font-medium pb-2">GWA</span>
               </div>
-              <p className="text-xl font-bold text-white">Cum Laude Standing.</p>
+              <p className="text-xl font-bold text-white">Graduated Cum Laude.</p>
             </div>
 
             {/* TOPCIT Stat */}

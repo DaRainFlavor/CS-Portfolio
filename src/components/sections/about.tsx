@@ -75,7 +75,7 @@ export function About() {
                 I see computing not just as pure logic, but as my favorite creative medium. It is the space where my diverse interests — problem-solving, psychology, gaming, arts, music, and business — can seamlessly converge into practical, user-centric solutions.
               </p>
               <p>
-                During my studies at the <strong>University of the Philippines Cebu</strong>, I maintained a strong academic standing (Cum Laude standing) while focusing my energy on project-based development. I like to build systems from scratch, coordinate requirements with real-world users, and integrate artificial intelligence capabilities to solve concrete problems.
+                During my studies at the <strong>University of the Philippines Cebu</strong>, I maintained a strong academic standing, graduating <strong>Cum Laude</strong>, while focusing my energy on project-based development. I like to build systems from scratch, coordinate requirements with real-world users, and integrate artificial intelligence capabilities to solve concrete problems.
               </p>
               <p>
                 As I step into the industry, I am eager to expand my boundaries, tackle complex computational challenges, and collaborate with teams building the next generation of web and mobile software.
@@ -90,9 +90,9 @@ export function About() {
                 </span>
                 <div className="flex flex-col">
                   <span className="text-sm font-semibold text-foreground">UP Cebu</span>
-                  <span className="text-xs text-muted-foreground">BS Computer Science • Expected 2026</span>
+                  <span className="text-xs text-muted-foreground">BS Computer Science • Class of 2026</span>
                   <span className="text-xs text-primary font-medium mt-0.5">
-                    GWA: <AnimatedCounter from={5} to={1.55} decimals={2} /> (Cum Laude Standing)
+                    GWA: <AnimatedCounter from={5} to={1.55} decimals={2} /> (Cum Laude)
                   </span>
                 </div>
               </div>
