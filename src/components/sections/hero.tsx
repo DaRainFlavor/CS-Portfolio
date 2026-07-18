@@ -118,7 +118,7 @@ export function Hero() {
                   src="/Sablay.png"
                   alt="Adrian Vaflor"
                   fill
-                  className="object-contain object-bottom scale-[1.15] translate-x-[-4%] translate-y-[-10%] contrast-[1.01] brightness-[1.01] drop-shadow-[0_4px_24px_rgba(0,0,0,0.12)]"
+                  className="object-contain object-bottom scale-[1.15] translate-x-[-4%] translate-y-[-20%] contrast-[1.01] brightness-[1.01] drop-shadow-[0_4px_24px_rgba(0,0,0,0.12)]"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   priority
                 />
